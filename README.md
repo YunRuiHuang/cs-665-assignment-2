@@ -7,23 +7,32 @@
 | Assignment # | 2                          |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+In this assignment, we design a notification system to allow the shop create and send the delivery requests to all drivers.
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/YunRuiHuang/cs-665-assignment-2
 
 # Implementation Description 
 
+- Level of flexibility
+  - This software has high flexibility to for both shop and driver
+  - For shop, we are easy to add more different shop and able to send notification
+  - For Driver, we able to add more drivers and able to receive notification
+  - The DeliveryRequest are easy to add and remove drivers
 
-For each assignment, please answer the following:
+- simplicity and understandability
+  - Driver are simple to add with only one method need to overwrite one implement method
+  - request has been split to a class so that easy understand what information need to send in request
 
-- Explain the level of flexibility in your implementation, including how new object types can
-be easily added or removed in the future.
-- Discuss the simplicity and understandability of your implementation, ensuring that it is
-easy for others to read and maintain.
-- Describe how you have avoided duplicated code and why it is important.
-- If applicable, mention any design patterns you have used and explain why they were
-chosen.
+- avoided duplicated code
+  - avoided duplicated via split driver to car and other, so only need to set the car type or transportation type to add new driver
+
+- design patterns
+  - I use Singleton pattern for this implementation
+  - All the shop should using same request sender
+  - All Driver receive massage from same sender
+  - Singleton pattern helps to make sure there is only one request middleware
+
 
 
 # Maven Commands
